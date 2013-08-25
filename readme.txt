@@ -1,0 +1,1 @@
+A simple bargraph made with pygame as an excercise.
