@@ -14,18 +14,18 @@ class Control(object):
         self.clock = pg.time.Clock()
         self.done = False
         self.fps = 60.0
-        self.Graph = graph.BarGraph(self.screen_rect)
+        self.graph = graph.BarGraph(self.screen_rect)
 
     def event_loop(self):
         for event in pg.event.get():
             if event.type == pg.QUIT:
                 self.done = True
-            self.Graph.get_event(event)
+            self.graph.get_event(event)
 
     def main_loop(self):
         while not self.done:
             self.event_loop()
-            self.Graph.update(self.screen)
+            self.graph.update(self.screen)
             pg.display.update()
             self.clock.tick(self.fps)
 
